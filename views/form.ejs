@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Mini Message</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    
+    <div class="form-container">
+        <%- include("nav.ejs")%>
+      <form action="/new" method="POST">
+          <div class="input-box">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" />
+          </div>
+          <div class="input-box">
+            <label for="message">Your message:</label>
+            <input type="text" name="message" id="message" />
+          </div>
+          <button>Send</button>
+      </form>
+    </div>
+  </body>
+</html>

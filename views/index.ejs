@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Message Board</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <%- include("nav.ejs")%>
+      <h1><%= title %></h1>
+      <div class="main-content">
+        <ul class="message-list">
+          <% messages.map((message) => {%>
+
+          <li class="message-item">
+            <div class="message-header">
+              <span><%= message.user %></span>
+              <span><%= message.added %></span>
+            </div>
+
+            <div class="message-content"><%= message.text %></div>
+          </li>
+
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
