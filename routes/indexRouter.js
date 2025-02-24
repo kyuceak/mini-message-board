@@ -23,6 +23,16 @@ indexRouter.get("/", (req,res) => {
     res.render("index", { title: "Mini Message Board",messages })
 })
 
+
+indexRouter.get("/details/:id",(req,res) => {
+
+
+  const id = req.params.id;
+
+  res.render("detail",{ message : messages[id]})
+})
+
+
 indexRouter.get("/new", (req,res) => {
     res.render("form")
 })
@@ -33,6 +43,8 @@ indexRouter.post("/new", (req,res) => {
     user: req.body.username,
     added: new Date(),
    })
+
+   res.redirect("/");
 })
 
 module.exports = indexRouter;

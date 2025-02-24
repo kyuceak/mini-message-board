@@ -60,11 +60,11 @@ li{
 .form-container{
     background-color: rgb(189, 189, 189);
     padding: 1rem;
-width: 50%;
-display: flex;
-align-items: center;
-flex-direction: column;
-
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:2rem
 }
 
 form{
@@ -78,8 +78,38 @@ form{
 .input-box{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    font-size: 1.2rem;
 }
 
+
+input{
+    font-size: 1.4rem;
+    padding: 0.2rem;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input:focus{
+    border: 2px solid rgb(62, 162, 250);
+}
+
+#send-btn{
+    box-sizing: border-box;
+    padding: 0.5rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: rgb(116, 188, 247);
+    color: white;
+}
+
+#send-btn:hover{
+    cursor: pointer;
+    color: black;
+    background-color: rgb(39, 158, 255);
+
+}
 
 /* navbar */
 nav{
