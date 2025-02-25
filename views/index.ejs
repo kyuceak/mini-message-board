@@ -16,7 +16,7 @@
 
           <li class="message-item">
             <div class="message-header">
-              <span><%= message.user %></span>
+              <span><%= message.username %></span>
               <span><%= message.added %></span>
             </div>
 
@@ -25,7 +25,7 @@
               <p><%= message.text %></p>
 
             <div class="details-button">
-              <button >  <a href=<%= `/details/${index}` %>>Open</a></button>
+              <button >  <a href=<%= `/details/${index +1}` %>>Open</a></button>
             </div>
         
             </div>

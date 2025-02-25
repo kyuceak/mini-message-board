@@ -3,6 +3,8 @@ const express = require("express");
 const app = express();
 const path = require("node:path");
 const assetsPath = path.join(__dirname, "public");
+require("dotenv").config();
+
 
 app.use(express.static(assetsPath));
 app.set("views", path.join(__dirname,"views"));
